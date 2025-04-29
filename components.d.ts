@@ -8,7 +8,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    Sedon: typeof import('./src/components/Sedon.vue')['default']
+    ApiKeyInput: typeof import('./src/components/ApiKeyInput.vue')['default']
+    ConfirmButton: typeof import('./src/components/ConfirmButton.vue')['default']
+    ContentTypeSelec: typeof import('./src/components/ContentTypeSelec.vue')['default']
+    ExtraOption: typeof import('./src/components/ExtraOption.vue')['default']
+    FormBody: typeof import('./src/components/FormBody.vue')['default']
+    FormInput: typeof import('./src/components/FormInput.vue')['default']
+    LayoutHeader: typeof import('./src/components/LayoutHeader.vue')['default']
+    Result: typeof import('./src/components/Result.vue')['default']
   }
 }
