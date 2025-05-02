@@ -1,0 +1,73 @@
+{
+  "NavOPT": {
+    "title0": "Inicio",
+    "title1": "Nosotros",
+    "title2": "Historial"
+  },
+  "MainTex": {
+    "Name": "Generador de Textos con Inteligencia Artificial.",
+    "Description": "Crea descripciones de productos, resúmenes de artículos y publicaciones para redes sociales en segundos con nuestra avanzada tecnología de IA..",
+    "ButtonTex": "Comenzar ahora"
+  },
+  "AboutUS": {
+    "SeccionName": "¿Que puedes hacer?",
+    "Service0": {
+      "Title": "Escribe tu idea",
+      "Description": "Ingresa un texto breve como descripción de producto, publicación, resumen o lo que necesites."
+    },
+    "Service1": {
+      "Title": "Procesamiento por IA",
+      "Description": "Nuestra IA analiza tu solicitud y genera contenido optimizado, coherente y listo para usar."
+    },
+    "Service2": {
+      "Title": "Obtén un texto sobre lo que desees",
+      "Description": "Recibe un texto según lo que solicites, desde resúmenes hasta publicaciones para redes sociales."
+    }
+  },
+  "ContentSecction": {
+    "Title": "Genera tu texto aqui",
+    "ContentSelector": {
+      "Opcion0": "Generador",
+      "Opcion": "Historial"
+    },
+    "FormWords": {
+      "ContendType": {
+        "Title": "Tipo de contenido",
+        "PlaceHolder": "Seleccione el tipo de contenido que quiere generar",
+        "Opt0": "Descripcion de producto",
+        "Opt1": "Resumen de articulo",
+        "Opt2": "Publicación para redes sociales"
+      },
+      "TextArea": {
+        "Title": "Tu texto o descripción",
+        "PlaceHolder": "Escribe aquí..."
+      },
+      "ExtraOptions": {
+        "Title": "Opciones adicionales",
+        "Tone": {
+          "Title": "Tono",
+          "PlaceHolder": "Tono de la respuesta",
+          "Opt": {
+            "Opt0": "Amigable",
+            "Opt1": "Casual",
+            "Opt2": "Formal",
+            "Opt3": "Profesional"
+          }
+        },
+        "Length": {
+          "Title": "Longitud",
+          "PlaceHolder": "Longitud de respuesta",
+          "Opt": {
+            "Opt0": "Corta",
+            "Opt1": "Media",
+            "Opt2": "Larga"
+          }
+        }
+      },
+      "ButtonTex": "Generar texto",
+      "TitleBTNCopy": "Copiar",
+      "TitleBTNDownload": "Descargar como txt"
+    }
+  },
+  "FooterText": "Alpha team. Todos los derechos reservados."
+}

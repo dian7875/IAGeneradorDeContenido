@@ -1,0 +1,73 @@
+{
+  "NavOPT": {
+    "title0": "Home",
+    "title1": "About Us",
+    "title2": "History"
+  },
+  "MainTex": {
+    "Name": "AI-powered text generator.",
+    "Description": "Create product descriptions, article summaries, and social media posts in seconds with our advanced AI technology.",
+    "ButtonTex": "Get started"
+  },
+  "AboutUS": {
+    "SeccionName": "What can you do?",
+    "Service0": {
+      "Title": "Write your idea",
+      "Description": "Enter a short text such as a product description, post, summary, or whatever you need."
+    },
+    "Service1": {
+      "Title": "AI Processing",
+      "Description": "Our AI analyzes your request and generates optimized, coherent, and ready-to-use content."
+    },
+    "Service2": {
+      "Title": "Get a text about what you wish",
+      "Description": "Receive a text based on your request, from summaries to social media posts."
+    }
+  },
+  "ContentSecction": {
+    "Title": "Generate your text here",
+    "ContentSelector": {
+      "Opcion0": "Generator",
+      "Opcion": "History"
+    },
+    "FormWords": {
+      "ContendType": {
+        "Title": "Content type",
+        "PlaceHolder": "Select the type of content you want to generate",
+        "Opt0": "Product description",
+        "Opt1": "Article summary",
+        "Opt2": "Social media post"
+      },
+      "TextArea": {
+        "Title": "Your text or description",
+        "PlaceHolder": "Write here..."
+      },
+      "ExtraOptions": {
+        "Title": "Additional options",
+        "Tone": {
+          "Title": "Tone:",
+          "PlaceHolder": "Response tone",
+          "Opt": {
+            "Opt0": "Friendly",
+            "Opt1": "Casual",
+            "Opt2": "Formal",
+            "Opt3": "Professional"
+          }
+        },
+        "Length": {
+          "Title": "Length",
+          "PlaceHolder": "Response length",
+          "Opt": {
+            "Opt0": "Short",
+            "Opt1": "Medium",
+            "Opt2": "Long"
+          }
+        }
+      },
+      "ButtonTex": "Generate text",
+      "TitleBTNCopy": "Copy",
+      "TitleBTNDownload": "Download as txt"
+    }
+  },
+  "FooterText": "Alpha team. All rights reserved."
+}

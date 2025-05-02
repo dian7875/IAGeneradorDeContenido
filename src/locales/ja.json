@@ -1,0 +1,73 @@
+{
+  "NavOPT": {
+    "title0": "ホーム",
+    "title1": "私たちについて",
+    "title2": "履歴"
+  },
+  "MainTex": {
+    "Name": "AIによるテキスト生成ツール。",
+    "Description": "高度なAI技術で、商品説明、記事の要約、SNS投稿を数秒で作成します。",
+    "ButtonTex": "今すぐ始める"
+  },
+  "AboutUS": {
+    "SeccionName": "何ができますか？",
+    "Service0": {
+      "Title": "アイデアを入力",
+      "Description": "商品説明、投稿、要約など、必要な内容を短く入力してください。"
+    },
+    "Service1": {
+      "Title": "AIによる処理",
+      "Description": "AIがリクエストを分析し、最適化された使いやすいコンテンツを生成します。"
+    },
+    "Service2": {
+      "Title": "あなたが望むことについてのテキストを取得",
+      "Description": "要約からソーシャルメディアの投稿まで、リクエストに基づいたテキストを受け取ります。"
+    }
+  },
+  "ContentSecction": {
+    "Title": "ここでテキストを生成",
+    "ContentSelector": {
+      "Opcion0": "ジェネレーター",
+      "Opcion": "履歴"
+    },
+    "FormWords": {
+      "ContendType": {
+        "Title": "コンテンツの種類",
+        "PlaceHolder": "生成したいコンテンツの種類を選択してください",
+        "Opt0": "商品説明",
+        "Opt1": "記事要約",
+        "Opt2": "SNS投稿"
+      },
+      "TextArea": {
+        "Title": "あなたのテキストまたは説明",
+        "PlaceHolder": "ここに入力してください..."
+      },
+      "ExtraOptions": {
+        "Title": "追加オプション",
+        "Tone": {
+          "Title": "トーン：",
+          "PlaceHolder": "返答のトーン",
+          "Opt": {
+            "Opt0": "フレンドリー",
+            "Opt1": "カジュアル",
+            "Opt2": "フォーマル",
+            "Opt3": "プロフェッショナル"
+          }
+        },
+        "Length": {
+          "Title": "長さ",
+          "PlaceHolder": "返答の長さ",
+          "Opt": {
+            "Opt0": "短い",
+            "Opt1": "普通",
+            "Opt2": "長い"
+          }
+        }
+      },
+      "ButtonTex": "テキストを生成",
+      "TitleBTNCopy": "コピー",
+      "TitleBTNDownload": "txtとしてダウンロード"
+    }
+  },
+  "FooterText": "Alphaチーム。全著作権所有。"
+}
