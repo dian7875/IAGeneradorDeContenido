@@ -28,7 +28,7 @@
     "Title": "Generate your text here",
     "ContentSelector": {
       "Opcion0": "Generator",
-      "Opcion": "History"
+      "Opcion1": "History"
     },
     "FormWords": {
       "ContendType": {
@@ -45,31 +45,26 @@
       "ExtraOptions": {
         "Title": "Additional options",
         "Tone": {
-          "Title": "Tone:",
+          "Title": "Tone",
           "PlaceHolder": "Response tone",
-          "Opt": {
-            "Opt0": "Friendly",
-            "Opt1": "Casual",
-            "Opt2": "Formal",
-            "Opt3": "Professional"
-          }
+          "Opt0": "Friendly",
+          "Opt1": "Casual",
+          "Opt2": "Formal",
+          "Opt3": "Professional"
         },
         "Length": {
           "Title": "Length",
           "PlaceHolder": "Response length",
-          "Opt": {
-            "Opt0": "Short",
-            "Opt1": "Medium",
-            "Opt2": "Long"
-          }
+          "Opt0": "Short",
+          "Opt1": "Medium",
+          "Opt2": "Long"
         }
       },
       "ButtonTex": "Generate text",
       "TitleBTNCopy": "Copy",
       "TitleBTNDownload": "Download as txt",
       "Result": "Generated text",
-       "loading": "Generating..."
-
+      "loading": "Generating..."
     }
   },
   "FooterText": "Alpha team. All rights reserved."

@@ -28,7 +28,7 @@
     "Title": "ここでテキストを生成",
     "ContentSelector": {
       "Opcion0": "ジェネレーター",
-      "Opcion": "履歴"
+      "Opcion1": "履歴"
     },
     "FormWords": {
       "ContendType": {
@@ -47,28 +47,24 @@
         "Tone": {
           "Title": "トーン：",
           "PlaceHolder": "返答のトーン",
-          "Opt": {
-            "Opt0": "フレンドリー",
-            "Opt1": "カジュアル",
-            "Opt2": "フォーマル",
-            "Opt3": "プロフェッショナル"
-          }
+          "Opt0": "フレンドリー",
+          "Opt1": "カジュアル",
+          "Opt2": "フォーマル",
+          "Opt3": "プロフェッショナル"
         },
         "Length": {
           "Title": "長さ",
           "PlaceHolder": "返答の長さ",
-          "Opt": {
-            "Opt0": "短い",
-            "Opt1": "普通",
-            "Opt2": "長い"
-          }
+          "Opt0": "短い",
+          "Opt1": "普通",
+          "Opt2": "長い"
         }
       },
       "ButtonTex": "テキストを生成",
       "TitleBTNCopy": "コピー",
       "TitleBTNDownload": "txtとしてダウンロード",
       "Result": "生成されたテキスト",
-        "loading": "生成中..."
+      "loading": "生成中..."
     }
   },
   "FooterText": "Alphaチーム。全著作権所有。"

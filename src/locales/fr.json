@@ -28,7 +28,7 @@
     "Title": "Générez votre texte ici",
     "ContentSelector": {
       "Opcion0": "Générateur",
-      "Opcion": "Historique"
+      "Opcion1": "Historique"
     },
     "FormWords": {
       "ContendType": {
@@ -45,29 +45,25 @@
       "ExtraOptions": {
         "Title": "Options supplémentaires",
         "Tone": {
-          "Title:": "Ton :",
+          "Title": "Ton",
           "PlaceHolder": "Ton de la réponse",
-          "Opt": {
-            "Opt0": "Amical",
-            "Opt1": "Décontracté",
-            "Opt2": "Formel",
-            "Opt3": "Professionnel"
-          }
+          "Opt0": "Amical",
+          "Opt1": "Décontracté",
+          "Opt2": "Formel",
+          "Opt3": "Professionnel"
         },
         "Length": {
           "Title": "Longueur",
           "PlaceHolder": "Longueur de la réponse",
-          "Opt": {
-            "Opt0": "Court",
-            "Opt1": "Moyen",
-            "Opt2": "Long"
-          }
+          "Opt0": "Court",
+          "Opt1": "Moyen",
+          "Opt2": "Long"
         }
       },
       "ButtonTex": "Générer le texte",
       "TitleBTNCopy": "Copier",
       "TitleBTNDownload": "Télécharger en txt",
-        "Result": "Texte généré",
+      "Result": "Texte généré",
       "loading": "Génération en cours..."
     }
   },
