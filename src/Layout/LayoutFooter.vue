@@ -1,5 +1,5 @@
 <template>
-    <footer class=" bg-[#BED9DD] w-full p-5 text-center">
+    <footer class=" bg-[#BED9DD] w-full p-5 text-center mt-8">
         <p class="text-sm text-gray-700">© {{ currentYear }} {{ t('FooterText') }}</p>
     </footer>
 </template>
