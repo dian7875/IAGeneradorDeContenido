@@ -54,6 +54,7 @@ function getLangName(lang: string) {
   return langNames[lang] || lang
 }
 
+
 function toggleDropdown() {
   dropdownOpen.value = !dropdownOpen.value
 }

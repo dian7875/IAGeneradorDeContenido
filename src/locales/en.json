@@ -66,7 +66,10 @@
       },
       "ButtonTex": "Generate text",
       "TitleBTNCopy": "Copy",
-      "TitleBTNDownload": "Download as txt"
+      "TitleBTNDownload": "Download as txt",
+      "Result": "Generated text",
+       "loading": "Generating..."
+
     }
   },
   "FooterText": "Alpha team. All rights reserved."

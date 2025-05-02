@@ -24,50 +24,52 @@
       "Description": "Recevez un texte selon votre demande, des résumés aux publications sur les réseaux sociaux."
     }
   },
-    "ContentSecction": {
-      "Title": "Générez votre texte ici",
-      "ContentSelector": {
-        "Opcion0": "Générateur",
-        "Opcion": "Historique"
-      },
-      "FormWords": {
-        "ContendType": {
-          "Title": "Type de contenu",
-          "PlaceHolder": "Sélectionnez le type de contenu que vous souhaitez générer",
-          "Opt0": "Description de produit",
-          "Opt1": "Résumé d’article",
-          "Opt2": "Publication sur les réseaux sociaux"
-        },
-        "TextArea": {
-          "Title": "Votre texte ou description",
-          "PlaceHolder": "Écrivez ici..."
-        },
-        "ExtraOptions": {
-            "Title": "Options supplémentaires",
-          "Tone": {
-            "Title:": "Ton :",
-            "PlaceHolder": "Ton de la réponse",
-            "Opt": {
-              "Opt0": "Amical",
-              "Opt1": "Décontracté",
-              "Opt2": "Formel",
-              "Opt3": "Professionnel"
-            }
-          },
-            "Length": {
-              "Title": "Longueur",
-              "PlaceHolder": "Longueur de la réponse",
-              "Opt": {
-                "Opt0": "Court",
-                "Opt1": "Moyen",
-                "Opt2": "Long"
-              }
-            }
-        },
-        "ButtonTex": "Générer le texte",
-        "TitleBTNCopy": "Copier",
-        "TitleBTNDownload": "Télécharger en txt"
-      }
+  "ContentSecction": {
+    "Title": "Générez votre texte ici",
+    "ContentSelector": {
+      "Opcion0": "Générateur",
+      "Opcion": "Historique"
     },
+    "FormWords": {
+      "ContendType": {
+        "Title": "Type de contenu",
+        "PlaceHolder": "Sélectionnez le type de contenu que vous souhaitez générer",
+        "Opt0": "Description de produit",
+        "Opt1": "Résumé d’article",
+        "Opt2": "Publication sur les réseaux sociaux"
+      },
+      "TextArea": {
+        "Title": "Votre texte ou description",
+        "PlaceHolder": "Écrivez ici..."
+      },
+      "ExtraOptions": {
+        "Title": "Options supplémentaires",
+        "Tone": {
+          "Title:": "Ton :",
+          "PlaceHolder": "Ton de la réponse",
+          "Opt": {
+            "Opt0": "Amical",
+            "Opt1": "Décontracté",
+            "Opt2": "Formel",
+            "Opt3": "Professionnel"
+          }
+        },
+        "Length": {
+          "Title": "Longueur",
+          "PlaceHolder": "Longueur de la réponse",
+          "Opt": {
+            "Opt0": "Court",
+            "Opt1": "Moyen",
+            "Opt2": "Long"
+          }
+        }
+      },
+      "ButtonTex": "Générer le texte",
+      "TitleBTNCopy": "Copier",
+      "TitleBTNDownload": "Télécharger en txt",
+        "Result": "Texte généré",
+      "loading": "Génération en cours..."
+    }
+  },
   "FooterText": "Alpha team. Tous droits réservés."
 }
