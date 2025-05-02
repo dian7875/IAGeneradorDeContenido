@@ -45,6 +45,7 @@ const flagMap: Record<string, string> = {
   en: 'us',  
   fr: 'fr',  
   ja: 'jp', 
+  de: 'de'
 }
 
 function getLangName(lang: string) {
@@ -53,6 +54,7 @@ function getLangName(lang: string) {
     en: 'English',
     fr: 'Français',
     ja: '日本語',
+    de: 'Deutsch',
   }
   return langNames[lang] || lang
 }
