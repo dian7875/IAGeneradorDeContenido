@@ -10,7 +10,7 @@
                     }}</button>
                 <button type="button" class="p-4 cursor-pointer"
                     :class="{ 'border-b-[#3C979F]  border-b-2 text-[#3C979F]': mode === 'History' }" @click="changeMode('History')">
-                    <i class="fas fa-history"></i>{{ t('ContentSecction.ContentSelector.Opcion')
+                    <i class="fas fa-history"></i>{{ t('ContentSecction.ContentSelector.Opcion1')
                     }}</button>
             </div>
             <div>

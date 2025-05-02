@@ -1,0 +1,76 @@
+{
+    "NavOPT": {
+      "title0": "Startseite",
+      "title1": "Über uns",
+      "title2": "Verlauf"
+    },
+    "MainTex": {
+      "Name": "KI-basierter Textgenerator.",
+      "Description": "Erstellen Sie Produktbeschreibungen, Artikelzusammenfassungen und Social-Media-Posts in Sekundenschnelle mit unserer fortschrittlichen KI-Technologie.",
+      "ButtonTex": "Jetzt starten"
+    },
+    "AboutUS": {
+      "SeccionName": "Was können Sie tun?",
+      "Service0": {
+        "Title": "Schreiben Sie Ihre Idee",
+        "Description": "Geben Sie einen kurzen Text wie eine Produktbeschreibung, einen Post, eine Zusammenfassung oder was auch immer Sie benötigen, ein."
+      },
+      "Service1": {
+        "Title": "KI-Verarbeitung",
+        "Description": "Unsere KI analysiert Ihre Anfrage und generiert optimierte, kohärente und einsatzbereite Inhalte."
+      },
+      "Service2": {
+        "Title": "Erhalten Sie einen Text über das, was Sie wünschen",
+        "Description": "Erhalten Sie einen Text basierend auf Ihrer Anfrage, von Zusammenfassungen bis hin zu Social-Media-Posts."
+      }
+    },
+    "ContentSecction": {
+      "Title": "Erstellen Sie hier Ihren Text",
+      "ContentSelector": {
+        "Opcion0": "Generator",
+        "Opcion1": "Verlauf"
+      },
+      "FormWords": {
+        "ContendType": {
+          "Title": "Inhaltstyp",
+          "PlaceHolder": "Wählen Sie den Inhaltstyp aus, den Sie erstellen möchten",
+          "Opt0": "Produktbeschreibung",
+          "Opt1": "Artikelzusammenfassung",
+          "Opt2": "Social-Media-Post"
+        },
+        "TextArea": {
+          "Title": "Ihr Text oder Ihre Beschreibung",
+          "PlaceHolder": "Schreiben Sie hier..."
+        },
+        "ExtraOptions": {
+          "Title": "Zusätzliche Optionen",
+          "Tone": {
+            "Title": "Ton:",
+            "PlaceHolder": "Antwortton",
+            "Opt": {
+              "Opt0": "Freundlich",
+              "Opt1": "Lässig",
+              "Opt2": "Formell",
+              "Opt3": "Professionell"
+            }
+          },
+          "Length": {
+            "Title": "Länge",
+            "PlaceHolder": "Antwortlänge",
+            "Opt": {
+              "Opt0": "Kurz",
+              "Opt1": "Mittel",
+              "Opt2": "Lang"
+            }
+          }
+        },
+        "ButtonTex": "Text generieren",
+        "TitleBTNCopy": "Kopieren",
+        "TitleBTNDownload": "Als txt herunterladen",
+        "Result": "Generierter Text",
+        "loading": "Wird generiert..."
+      }
+    },
+    "FooterText": "Alpha-Team. Alle Rechte vorbehalten."
+  }
+  

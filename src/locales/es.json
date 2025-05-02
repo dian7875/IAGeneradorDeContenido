@@ -28,7 +28,7 @@
     "Title": "Genera tu texto aqui",
     "ContentSelector": {
       "Opcion0": "Generador",
-      "Opcion": "Historial"
+      "Opcion1": "Historial"
     },
     "FormWords": {
       "ContendType": {

@@ -22,6 +22,9 @@
         <li @click="changeLang('ja', '日本語')" class="flex items-center p-2 cursor-pointer hover:bg-gray-100">
           <span class="fi fi-jp mr-2"></span> 日本語
         </li>
+        <li @click="changeLang('de', 'Deutsch')" class="flex items-center p-2 cursor-pointer hover:bg-gray-100">
+          <span class="fi fi-de mr-2"></span> Deutsch
+        </li>
       </ul>
     </div>
   </div>
