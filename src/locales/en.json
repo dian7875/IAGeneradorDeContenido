@@ -47,17 +47,21 @@
         "Tone": {
           "Title": "Tone",
           "PlaceHolder": "Response tone",
-          "Opt0": "Friendly",
-          "Opt1": "Casual",
-          "Opt2": "Formal",
-          "Opt3": "Professional"
+          "Opt":{
+            "Opt0": "Friendly",
+            "Opt1": "Casual",
+            "Opt2": "Formal",
+            "Opt3": "Professional"
+          }
         },
         "Length": {
           "Title": "Length",
           "PlaceHolder": "Response length",
-          "Opt0": "Short",
-          "Opt1": "Medium",
-          "Opt2": "Long"
+          "Opt":{
+            "Opt0": "Short",
+            "Opt1": "Medium",
+            "Opt2": "Long"
+          }
         }
       },
       "ButtonTex": "Generate text",

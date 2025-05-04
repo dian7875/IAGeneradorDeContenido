@@ -1,5 +1,5 @@
 <template>
-    <main class="w-full px-10 flex flex-col gap-y-10">
+    <main class="w-full px-10 flex flex-col gap-y-10 max-md:px-5">
         <Hero />
         <AboutUs />
         <GenerateContent />

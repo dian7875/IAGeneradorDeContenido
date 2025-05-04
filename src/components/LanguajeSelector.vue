@@ -1,7 +1,7 @@
 <template>
   <div  ref="dropdownRef">
      <button @click="toggleDropdown" class="flex items-center cursor-pointer">
-      <span :class="`fi fi-${flagMap[selectedLang]}`" class="mr-2"></span>
+      <span :class="`fi fi-${flagMap[selectedLang]}`" class="mr-2 max-sm:mr-1"></span>
       {{ selectedLangName }}
       <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>

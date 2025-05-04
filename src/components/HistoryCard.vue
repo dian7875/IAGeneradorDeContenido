@@ -1,16 +1,16 @@
 <template>
     <div class="border rounded-md p-2 space-y-2">
         <div class=" flex justify-between">
-            <p>{{ format(prompts.fecha, 'DD-MM-YYYY') }}</p>
+            <p class=" max-md:text-sm">{{ format(prompts.fecha, 'DD-MM-YYYY') }}</p>
             <div class=" flex gap-x-3">
                 <AccionsButtons :response="prompts.resultado" />
-                <button @click="emit('delete', prompts.id)" class=" cursor-pointer" type="button"><i class="fas fa-trash-alt text-2xl"></i>
+                <button @click="emit('delete', prompts.id)" class=" cursor-pointer" type="button"><i class="fas fa-trash-alt text-2xl max-md:text-base"></i>
                 </button>
             </div>
         </div>
-        <p>{{ prompts.prompt.replace('Genera un ', '').split(',')[0].toUpperCase() }}</p>
-        <p class=" w-2/3">{{ prompts.resultado }}</p>
-        <p>{{ format(prompts.fecha, 'hh:mm') }}</p>
+        <p class="max-md:text-sm">{{ prompts.prompt.replace('Genera un ', '').split(',')[0].toUpperCase() }}</p>
+        <p class=" w-2/3 max-md:text-sm max-md:w-full">{{ prompts.resultado }}</p>
+        <p class=" max-md:text-sm">{{ format(prompts.fecha, 'hh:mm') }}</p>
     </div>
 </template>
 <script setup lang="ts">

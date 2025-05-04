@@ -1,10 +1,10 @@
 <template>
-    <form @submit="handleSubmit" class=" grid px-6 py-3 text-lg gap-y-6">
+    <form @submit="handleSubmit" class=" grid px-6 py-3 text-lg gap-y-6 max-lg:text-base">
         <fieldset class="grid">
             <label class="text-[#666666] font-semibold" for="contentType">{{
                 t('ContentSecction.FormWords.ContendType.Title') }}</label>
-            <select required v-model="contentType" class="w-fit border p-2 rounded-md border-[#AAAAAA]" name=""
-                id="contentType" :title="t('ContentSecction.FormWords.ContendType.PlaceHolder')">
+            <select required v-model="contentType" class="w-fit border p-2 rounded-md border-[#AAAAAA] max-md:w-full"
+                name="" id="contentType" :title="t('ContentSecction.FormWords.ContendType.PlaceHolder')">
                 <option value="">{{ t('ContentSecction.FormWords.ContendType.PlaceHolder') }}</option>
                 <option :value="t('ContentSecction.FormWords.ContendType.Opt0')">{{
                     t('ContentSecction.FormWords.ContendType.Opt0') }}</option>
@@ -16,17 +16,18 @@
         </fieldset>
         <fieldset class=" grid">
             <label class="text-[#666666] font-semibold" for="UserPromt">{{ t('ContentSecction.FormWords.TextArea.Title')
-                }}</label>
+            }}</label>
             <textarea required v-model="Userprompt" class="border p-2 rounded-xl border-[#AAAAAA]" rows="10"
                 :placeholder="t('ContentSecction.FormWords.TextArea.PlaceHolder')" name="" id="UserPromt"></textarea>
         </fieldset>
-        <fieldset class=" grid grid-cols-2 grid-rows-2">
-            <legend class="text-[#666666] font-semibold">{{ t('ContentSecction.FormWords.ExtraOptions.Title') }}
+        <fieldset class=" grid grid-cols-2 grid-rows-2 max-md:grid-cols-1 max-md:gap-y-4">
+            <legend class="text-[#666666] font-semibold max-md:pb-2">{{
+                t('ContentSecction.FormWords.ExtraOptions.Title') }}
             </legend>
             <div>
                 <label class=" mr-2.5" for="tone">{{ t('ContentSecction.FormWords.ExtraOptions.Tone.Title') }}</label>
-                <select required v-model="tone" class="w-fit border p-1 rounded-md border-[#AAAAAA]"
-                    :title="t('ContentSecction.FormWords.ExtraOptions.Tone.PlaceHolder')" name="" id="">
+                <select required v-model="tone" class="w-fit border p-1 rounded-md border-[#AAAAAA]
+                max-md:w-full" :title="t('ContentSecction.FormWords.ExtraOptions.Tone.PlaceHolder')" name="" id="">
                     <option value="">{{ t('ContentSecction.FormWords.ExtraOptions.Tone.PlaceHolder') }}</option>
                     <option :value="t('ContentSecction.FormWords.ExtraOptions.Tone.Opt.Opt0')">{{
                         t('ContentSecction.FormWords.ExtraOptions.Tone.Opt.Opt0') }}</option>
@@ -38,8 +39,8 @@
             </div>
             <div>
                 <label class=" mr-2.5" for="tone">{{ t('ContentSecction.FormWords.ExtraOptions.Length.Title') }}</label>
-                <select required v-model="length" class="w-fit border p-1 rounded-md border-[#AAAAAA]"
-                    :title="t('ContentSecction.FormWords.ExtraOptions.Length.PlaceHolder')" name="" id="">
+                <select required v-model="length" class="w-fit border p-1 rounded-md border-[#AAAAAA]
+                 max-md:w-full" :title="t('ContentSecction.FormWords.ExtraOptions.Length.PlaceHolder')" name="" id="">
                     <option value="">{{
                         t('ContentSecction.FormWords.ExtraOptions.Length.PlaceHolder') }}</option>
                     <option :value="t('ContentSecction.FormWords.ExtraOptions.Length.Opt.Opt0')">{{
@@ -57,7 +58,12 @@
             {{ isPending ? t('ContentSecction.FormWords.loading') : t('ContentSecction.FormWords.ButtonTex') }}
         </button>
     </form>
-    <Response v-if="response" :response="response" />
+    <div>
+        <div v-if="isPending">
+            <img src="/Loader.gif" alt="" class="h-70 w-full">
+        </div>
+        <Response v-else-if="response" :response="response" />
+    </div>
 </template>
 
 <script setup lang="ts">

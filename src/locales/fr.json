@@ -47,17 +47,21 @@
         "Tone": {
           "Title": "Ton",
           "PlaceHolder": "Ton de la réponse",
-          "Opt0": "Amical",
-          "Opt1": "Décontracté",
-          "Opt2": "Formel",
-          "Opt3": "Professionnel"
+          "Opt": {
+            "Opt0": "Amical",
+            "Opt1": "Décontracté",
+            "Opt2": "Formel",
+            "Opt3": "Professionnel"
+          }
         },
         "Length": {
           "Title": "Longueur",
           "PlaceHolder": "Longueur de la réponse",
-          "Opt0": "Court",
-          "Opt1": "Moyen",
-          "Opt2": "Long"
+          "Opt": {
+            "Opt0": "Court",
+            "Opt1": "Moyen",
+            "Opt2": "Long"
+          }
         }
       },
       "ButtonTex": "Générer le texte",
