@@ -1,5 +1,5 @@
 <template>
-    <header class="w-full p-2 py-4 bg-[#DEEBEC] sticky top-0 dark:bg-black 
+    <header class="w-full p-2 max-md:py-4 bg-[#DEEBEC] sticky top-0 dark:bg-black 
      dark:text-white">
         <nav class=" flex items-center justify-between max-md:justify-end ">
             <img src="/Icon.png" alt="" class=" h-15 w-15 transition-filter duration-500 ease-in-out hover:invert-75 
