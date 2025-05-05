@@ -4,7 +4,7 @@
             <label class="text-[#666666] font-semibold" for="contentType">{{
                 t('ContentSecction.FormWords.ContendType.Title') }}</label>
             <select required v-model="contentType" class="w-fit border p-2 rounded-md border-[#AAAAAA] max-md:w-full
-             dark:bg-black"
+             dark:bg-black overflow-hidden"
                 name="" id="contentType" :title="t('ContentSecction.FormWords.ContendType.PlaceHolder')">
                 <option value="">{{ t('ContentSecction.FormWords.ContendType.PlaceHolder') }}</option>
                 <option :value="t('ContentSecction.FormWords.ContendType.Opt0')">{{
