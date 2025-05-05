@@ -5,8 +5,8 @@
             <h1 class=" text-5xl font-bold 
             max-lg:text-3xl
              max-sm:text-xl
-              max-xl:text-4xl">{{ t('MainTex.Name') }}</h1>
-            <p class=" text-2xl text-[#3D979F] 
+              max-xl:text-4xl dark:text-[#3D979F] ">{{ t('MainTex.Name') }}</h1>
+            <p class=" text-2xl text-[#3D979F] dark:text-white
             max-lg:text-lg
              max-sm:text-base">{{ t('MainTex.Description') }}</p>
             <button class=" bg-[#3D979F] p-4 rounded-md text-white hover:bg-[#a8c3c4] hover:text-black

@@ -1,9 +1,9 @@
 <template>
     <button @click="copyToClipboard(response)" class=" cursor-pointer"
-        :title="t('ContentSecction.FormWords.TitleBTNCopy')" type="button"><i class="fas fa-copy text-2xl max-md:text-base"></i></button>
+        :title="t('ContentSecction.FormWords.TitleBTNCopy')" type="button"><i class="fas fa-copy text-2xl max-md:text-base hover:text-yellow-400"></i></button>
     <button @click="downloadFile(response)" class=" cursor-pointer"
         :title="t('ContentSecction.FormWords.TitleBTNDownload')" type="button"><i
-            class="fas fa-download text-2xl max-md:text-base"></i></button>
+            class="fas fa-download text-2xl max-md:text-base hover:text-green-400"></i></button>
 </template>
 
 <script setup lang="ts">

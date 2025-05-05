@@ -1,5 +1,5 @@
 <template>
-    <div class=" bg-[#F9FAFB] grid grid-cols-2 justify-between items-center mx-6 p-3 rounded-lg mb-6">
+    <div class=" bg-[#F9FAFB] dark:bg-black dark:text-white grid grid-cols-2 justify-between items-center mx-6 p-3 rounded-lg mb-6">
         <p class=" text-lg font-semibold text-[#666666] ">
             {{ t('ContentSecction.FormWords.Result') }}
         </p>

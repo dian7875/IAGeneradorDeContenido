@@ -1,10 +1,10 @@
 <template>
-    <div class="border rounded-md p-2 space-y-2">
+    <div class="border rounded-md p-2 space-y-2 dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-900">
         <div class=" flex justify-between">
             <p class=" max-md:text-sm">{{ format(prompts.fecha, 'DD-MM-YYYY') }}</p>
             <div class=" flex gap-x-3">
                 <AccionsButtons :response="prompts.resultado" />
-                <button @click="emit('delete', prompts.id)" class=" cursor-pointer" type="button"><i class="fas fa-trash-alt text-2xl max-md:text-base"></i>
+                <button @click="emit('delete', prompts.id)" class=" cursor-pointer" type="button"><i class="fas fa-trash-alt text-2xl max-md:text-base hover:text-red-500"></i>
                 </button>
             </div>
         </div>

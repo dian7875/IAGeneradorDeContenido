@@ -1,9 +1,10 @@
 <template>
-    <form @submit="handleSubmit" class=" grid px-6 py-3 text-lg gap-y-6 max-lg:text-base">
+    <form @submit="handleSubmit" class=" grid px-6 py-3 text-lg gap-y-6 max-lg:text-base dark:text-white ">
         <fieldset class="grid">
             <label class="text-[#666666] font-semibold" for="contentType">{{
                 t('ContentSecction.FormWords.ContendType.Title') }}</label>
-            <select required v-model="contentType" class="w-fit border p-2 rounded-md border-[#AAAAAA] max-md:w-full"
+            <select required v-model="contentType" class="w-fit border p-2 rounded-md border-[#AAAAAA] max-md:w-full
+             dark:bg-black"
                 name="" id="contentType" :title="t('ContentSecction.FormWords.ContendType.PlaceHolder')">
                 <option value="">{{ t('ContentSecction.FormWords.ContendType.PlaceHolder') }}</option>
                 <option :value="t('ContentSecction.FormWords.ContendType.Opt0')">{{
@@ -26,7 +27,7 @@
             </legend>
             <div>
                 <label class=" mr-2.5" for="tone">{{ t('ContentSecction.FormWords.ExtraOptions.Tone.Title') }}</label>
-                <select required v-model="tone" class="w-fit border p-1 rounded-md border-[#AAAAAA]
+                <select required v-model="tone" class="w-fit border p-1 rounded-md border-[#AAAAAA] dark:bg-black
                 max-md:w-full" :title="t('ContentSecction.FormWords.ExtraOptions.Tone.PlaceHolder')" name="" id="">
                     <option value="">{{ t('ContentSecction.FormWords.ExtraOptions.Tone.PlaceHolder') }}</option>
                     <option :value="t('ContentSecction.FormWords.ExtraOptions.Tone.Opt.Opt0')">{{
@@ -39,7 +40,7 @@
             </div>
             <div>
                 <label class=" mr-2.5" for="tone">{{ t('ContentSecction.FormWords.ExtraOptions.Length.Title') }}</label>
-                <select required v-model="length" class="w-fit border p-1 rounded-md border-[#AAAAAA]
+                <select required v-model="length" class="w-fit border p-1 rounded-md border-[#AAAAAA] dark:bg-black
                  max-md:w-full" :title="t('ContentSecction.FormWords.ExtraOptions.Length.PlaceHolder')" name="" id="">
                     <option value="">{{
                         t('ContentSecction.FormWords.ExtraOptions.Length.PlaceHolder') }}</option>
@@ -54,7 +55,7 @@
         </fieldset>
 
         <button :disabled="isPending" :title="t('ContentSecction.FormWords.ButtonTex')" class=" bg-[#3D979F]
-         p-2 font-semibold text-white rounded-xl cursor-pointer" type="submit">
+         p-2 font-semibold text-white rounded-xl cursor-pointer hover:bg-[#3d979fce]" type="submit">
             {{ isPending ? t('ContentSecction.FormWords.loading') : t('ContentSecction.FormWords.ButtonTex') }}
         </button>
     </form>
