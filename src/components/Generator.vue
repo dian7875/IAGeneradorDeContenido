@@ -93,11 +93,21 @@ const { mutate, isPending } = useMutation({
     }
 })
 
+function getLangName(lang: string) {
+  const langNames: Record<string, string> = {
+    es: 'Español',
+    en: 'English',
+    fr: 'Français',
+    ja: '日本語',
+    de: 'Deutsch',
+  }
+  return langNames[lang] || lang
+}
 
 const handleSubmit = (e: Event) => {
     e.preventDefault()
     mutate({
-        prompt: `Genera un ${contentType.value.toLowerCase()}, en idioma ${localStorage.getItem('lang')}, con un tono ${tone.value.toLowerCase()} y una longitud ${length.value.toLowerCase()}. Tema: ${Userprompt.value}`
+        prompt: `Genera un ${contentType.value.toLowerCase()}, en idioma ${getLangName(localStorage.getItem('lang') || "Español")}, con un tono ${tone.value.toLowerCase()} y una longitud ${length.value.toLowerCase()}. Tema: ${Userprompt.value}`
     })
 }
 
