@@ -1,7 +1,7 @@
 <template>
-    <form @submit="handleSubmit" class=" grid px-6 py-3 text-lg gap-y-6 max-lg:text-base dark:text-white ">
+    <form @submit="handleSubmit" class=" grid px-6 py-3 text-lg gap-y-6 max-lg:text-base max-md:gap-y-4 max-md:py-2 max-md:px-4 dark:text-white ">
         <fieldset class="grid">
-            <label class="text-[#666666] font-semibold" for="contentType">{{
+            <label class="text-[#666666] font-semibold dark:text-white" for="contentType">{{
                 t('ContentSecction.FormWords.ContendType.Title') }}</label>
             <select required v-model="contentType" class="w-fit border p-2 rounded-md border-[#AAAAAA] max-md:w-full
              dark:bg-black overflow-hidden"
@@ -16,17 +16,18 @@
             </select>
         </fieldset>
         <fieldset class=" grid">
-            <label class="text-[#666666] font-semibold" for="UserPromt">{{ t('ContentSecction.FormWords.TextArea.Title')
+            <label class="text-[#666666] font-semibold dark:text-white" for="UserPromt">{{ t('ContentSecction.FormWords.TextArea.Title')
             }}</label>
-            <textarea required v-model="Userprompt" class="border p-2 rounded-xl border-[#AAAAAA]" rows="10"
+            <textarea required v-model="Userprompt" class="border p-2 rounded-xl border-[#AAAAAA] " 
+                :rows="isMobile ? 5 : 10"
                 :placeholder="t('ContentSecction.FormWords.TextArea.PlaceHolder')" name="" id="UserPromt"></textarea>
         </fieldset>
-        <fieldset class=" grid grid-cols-2 grid-rows-2 max-md:grid-cols-1 max-md:gap-y-4">
-            <legend class="text-[#666666] font-semibold max-md:pb-2">{{
+        <fieldset class=" grid grid-cols-2 grid-rows-2 max-md:grid-cols-1 max-md:gap-y-4  ">
+            <legend class="text-[#666666] font-semibold max-md:pb-2 dark:text-white">{{
                 t('ContentSecction.FormWords.ExtraOptions.Title') }}
             </legend>
             <div>
-                <label class=" mr-2.5" for="tone">{{ t('ContentSecction.FormWords.ExtraOptions.Tone.Title') }}</label>
+                <label class=" mr-2.5  " for="tone">{{ t('ContentSecction.FormWords.ExtraOptions.Tone.Title') }}</label>
                 <select required v-model="tone" class="w-fit border p-1 rounded-md border-[#AAAAAA] dark:bg-black
                 max-md:w-full" :title="t('ContentSecction.FormWords.ExtraOptions.Tone.PlaceHolder')" name="" id="">
                     <option value="">{{ t('ContentSecction.FormWords.ExtraOptions.Tone.PlaceHolder') }}</option>
@@ -39,7 +40,7 @@
                 </select>
             </div>
             <div>
-                <label class=" mr-2.5" for="tone">{{ t('ContentSecction.FormWords.ExtraOptions.Length.Title') }}</label>
+                <label class=" mr-2.5  " for="tone">{{ t('ContentSecction.FormWords.ExtraOptions.Length.Title') }}</label>
                 <select required v-model="length" class="w-fit border p-1 rounded-md border-[#AAAAAA] dark:bg-black
                  max-md:w-full" :title="t('ContentSecction.FormWords.ExtraOptions.Length.PlaceHolder')" name="" id="">
                     <option value="">{{
@@ -68,7 +69,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import Response from './Response.vue';
 import { useI18n } from 'vue-i18n'
 import { useMutation } from '@tanstack/vue-query';
@@ -81,6 +82,19 @@ const Userprompt = ref('')
 const tone = ref('')
 const length = ref('')
 const response = ref('')
+const isMobile = ref(window.innerWidth <= 768)
+
+const checkScreenSize = () => {
+    isMobile.value = window.innerWidth <= 768
+}
+
+onMounted(() => {
+    window.addEventListener('resize', checkScreenSize)
+})
+
+onUnmounted(() => {
+    window.removeEventListener('resize', checkScreenSize)
+})
 
 const { mutate, isPending } = useMutation({
     mutationFn: generateText,
