@@ -6,11 +6,11 @@
                 <button type="button" class="p-4 cursor-pointer"
                     :class="{ ' border-b-[#3C979F]  border-b-2 text-[#3C979F]': mode === 'Generator' }"
                     @click="changeMode('Generator')">
-                    <i class="fas fa-pencil-alt"></i>{{ t('ContentSecction.ContentSelector.Opcion0')
+                    <i class="fas fa-pencil-alt mr-2"></i>{{ t('ContentSecction.ContentSelector.Opcion0')
                     }}</button>
                 <button type="button" class="p-4 cursor-pointer"
                     :class="{ 'border-b-[#3C979F]  border-b-2 text-[#3C979F]': mode === 'History' }" @click="changeMode('History')">
-                    <i class="fas fa-history"></i>{{ t('ContentSecction.ContentSelector.Opcion1')
+                    <i class="fas fa-history mr-2"></i>{{ t('ContentSecction.ContentSelector.Opcion1')
                     }}</button>
             </div>
             <div>
