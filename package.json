@@ -17,6 +17,7 @@
     "@tanstack/vue-query": "^5.75.0",
     "axios": "^1.9.0",
     "flag-icons": "^7.3.2",
+    "iageneradordecontenido": "file:",
     "tailwindcss": "^4.1.4",
     "vue": "^3.5.13",
     "vue-i18n": "^11.1.3"
