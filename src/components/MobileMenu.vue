@@ -62,7 +62,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount, defineProps, defineEmits, watch } from 'vue';
+import { ref, onMounted, onBeforeUnmount, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const props = defineProps({
