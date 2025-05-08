@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Overlay con efecto blur aplicado al fondo de la página cuando el menú está abierto -->
     <div v-if="isOpen" 
          class="fixed inset-0 z-40 backdrop-blur-[4px] bg-black/5 dark:bg-black/10 transition-all duration-300"
          :class="{ 'opacity-100': isOpen, 'opacity-0': !isOpen }"
