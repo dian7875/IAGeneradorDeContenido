@@ -13,8 +13,8 @@
              max-lg:p-2" type="button">
              <a href="#ChatSecction">{{t('MainTex.ButtonTex') }}</a></button>
         </div>
-        <img src="/Logo.png" class=" col-span-2 col-start-4 w-full max-lg:col-span-3 max-md:h-72 max-md:w-72"
-            alt="LogoPrincipal">
+        <img src="/Robot.png" class="col-span-2 col-start-4 w-full h-auto object-contain max-lg:col-span-3 max-md:max-w-[100%] max-md:mx-auto"
+        alt="LogoPrincipal">
     </section>
 </template>
 
