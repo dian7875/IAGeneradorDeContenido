@@ -1,11 +1,12 @@
 <template>
-    <form @submit="handleSubmit" class=" grid px-6 py-3 text-lg gap-y-6 max-lg:text-base max-md:gap-y-4 max-md:py-2 max-md:px-4 dark:text-white ">
+    <form @submit="handleSubmit"
+        class=" grid px-6 py-3 text-lg gap-y-6 max-lg:text-base max-md:gap-y-4 max-md:py-2 max-md:px-4 dark:text-white ">
         <fieldset class="grid">
             <label class="text-[#666666] font-semibold dark:text-white" for="contentType">{{
                 t('ContentSecction.FormWords.ContendType.Title') }}</label>
             <select required v-model="contentType" class="w-fit border p-2 rounded-md border-[#AAAAAA] max-md:w-full
-             dark:bg-black overflow-hidden"
-                name="" id="contentType" :title="t('ContentSecction.FormWords.ContendType.PlaceHolder')">
+             dark:bg-black overflow-hidden" name="" id="contentType"
+                :title="t('ContentSecction.FormWords.ContendType.PlaceHolder')">
                 <option value="">{{ t('ContentSecction.FormWords.ContendType.PlaceHolder') }}</option>
                 <option :value="t('ContentSecction.FormWords.ContendType.Opt0')">{{
                     t('ContentSecction.FormWords.ContendType.Opt0') }}</option>
@@ -16,11 +17,12 @@
             </select>
         </fieldset>
         <fieldset class=" grid">
-            <label class="text-[#666666] font-semibold dark:text-white" for="UserPromt">{{ t('ContentSecction.FormWords.TextArea.Title')
+            <label class="text-[#666666] font-semibold dark:text-white" for="UserPromt">{{
+                t('ContentSecction.FormWords.TextArea.Title')
             }}</label>
-            <textarea required v-model="Userprompt" class="border p-2 rounded-xl border-[#AAAAAA] " 
-                :rows="isMobile ? 5 : 10"
-                :placeholder="t('ContentSecction.FormWords.TextArea.PlaceHolder')" name="" id="UserPromt"></textarea>
+            <textarea required v-model="Userprompt" class="border p-2 rounded-xl border-[#AAAAAA] "
+                :rows="isMobile ? 5 : 10" :placeholder="t('ContentSecction.FormWords.TextArea.PlaceHolder')" name=""
+                id="UserPromt"></textarea>
         </fieldset>
         <fieldset class=" grid grid-cols-2 grid-rows-2 max-md:grid-cols-1 max-md:gap-y-4  ">
             <legend class="text-[#666666] font-semibold max-md:pb-2 dark:text-white">{{
@@ -40,7 +42,8 @@
                 </select>
             </div>
             <div>
-                <label class=" mr-2.5  " for="tone">{{ t('ContentSecction.FormWords.ExtraOptions.Length.Title') }}</label>
+                <label class=" mr-2.5  " for="tone">{{ t('ContentSecction.FormWords.ExtraOptions.Length.Title')
+                }}</label>
                 <select required v-model="length" class="w-fit border p-1 rounded-md border-[#AAAAAA] dark:bg-black
                  max-md:w-full" :title="t('ContentSecction.FormWords.ExtraOptions.Length.PlaceHolder')" name="" id="">
                     <option value="">{{
@@ -61,27 +64,29 @@
         </button>
     </form>
     <div>
-        <div v-if="isPending">
+        <div v-if="isLoading">
             <img src="/Loader.gif" alt="" class="h-70 w-full">
         </div>
-        <Response v-else-if="response" :response="response" />
+        <Response v-else-if="response" :response="response" :on-regenerate="() => handleRegenerate()" />
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, computed } from 'vue';
 import Response from './Response.vue';
 import { useI18n } from 'vue-i18n'
 import { useMutation } from '@tanstack/vue-query';
-import { generateText } from '../services/Api.services';
+import { generateText, regenerateResponse } from '../services/Api.services';
 const { t } = useI18n()
+
+const isLoading = computed(() => isPending.value || isRegenerating.value)
 
 
 const contentType = ref('')
 const Userprompt = ref('')
 const tone = ref('')
 const length = ref('')
-const response = ref('')
+const response = ref()
 const isMobile = ref(window.innerWidth <= 768)
 
 const checkScreenSize = () => {
@@ -99,7 +104,7 @@ onUnmounted(() => {
 const { mutate, isPending } = useMutation({
     mutationFn: generateText,
     onSuccess: (data) => {
-        response.value = data.data.resultado
+        response.value = data.data
     },
     onError: (err) => {
         console.error(err)
@@ -108,14 +113,14 @@ const { mutate, isPending } = useMutation({
 })
 
 function getLangName(lang: string) {
-  const langNames: Record<string, string> = {
-    es: 'Español',
-    en: 'English',
-    fr: 'Français',
-    ja: '日本語',
-    de: 'Deutsch',
-  }
-  return langNames[lang] || lang
+    const langNames: Record<string, string> = {
+        es: 'Español',
+        en: 'English',
+        fr: 'Français',
+        ja: '日本語',
+        de: 'Deutsch',
+    }
+    return langNames[lang] || lang
 }
 
 const handleSubmit = (e: Event) => {
@@ -124,5 +129,19 @@ const handleSubmit = (e: Event) => {
         prompt: `Genera un ${contentType.value.toLowerCase()}, en idioma ${getLangName(localStorage.getItem('lang') || "Español")}, con un tono ${tone.value.toLowerCase()} y una longitud ${length.value.toLowerCase()}. Tema: ${Userprompt.value}`
     })
 }
+
+function handleRegenerate() {
+    regenerate(response.value.id)
+}
+
+const { mutate: regenerate, isPending: isRegenerating } = useMutation({
+    mutationFn: regenerateResponse,
+    onSuccess: (data) => {
+        response.value = data.data
+    },
+    onError: () => {
+        response.value = 'Ocurrió un error al regenerar el texto.'
+    }
+})
 
 </script>
